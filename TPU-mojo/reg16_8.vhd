@@ -46,7 +46,7 @@ architecture Behavioral of reg16_8 is
 	signal regs: store_t := (others => X"0000");
 begin
 
-	process(I_clk, I_en)
+	process(I_clk)
 	begin
 		if rising_edge(I_clk) and I_en='1' then
 			O_dataA <= regs(to_integer(unsigned(I_selA)));
